@@ -2,8 +2,8 @@
 
 #define version "1.3"
 
-#define token "Your token bot"
-#define webhookBot "Your webhook bot"
+#define token "your bot's token"
+#define webhookBot "your bot's webhook"
 
 int main(){
 
