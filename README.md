@@ -25,7 +25,7 @@ yay -S dpp curl
     program.perfomBot();
 
     return 0;
-}
+    }
 
 OBS: O código acima é um exemplo e pode precisar de ajustes para funcionar corretamente.
 
