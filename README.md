@@ -5,12 +5,14 @@ Isso abre portas para ser um trojan, mas meu intuito não é esse. Logo abaixo, 
 
 // codigo
 
-  #define token " o token do seu bot aqui "
-  #define webhookBot " o web hook do seu bot para usar como log "
-  
-  int main(){
-  
-      network program(token, webhookBot, version);
+    
+    int main(){
+      
+      std::string token = " o token do seu bot aqui ";
+      const std::string& webhook_url = " o web hook do seu bot para usar como log ";
+      const std::string version
+      
+      network program(token, webhook_url, version);
       program.MAIN();
       program.perfomBot();
   
@@ -18,11 +20,11 @@ Isso abre portas para ser um trojan, mas meu intuito não é esse. Logo abaixo, 
   
   
       return 0;
-  }
+    }
   
 // fim do codigo
 
-OBS: 
+OBS: não necessariamente assim e não conferi se realmente está correto
 
 
 Logo abaixo, ensino alguns comandos basicos para usar ele
