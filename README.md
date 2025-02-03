@@ -37,6 +37,7 @@ Comandos Básicos
 Os comandos do bot são acionados pelo prefixo ;.
 Segue a lista de comandos disponíveis:
 Comando	Função
+```
 ;shutDown	    Desliga o bot (não a máquina).
 ;deBugger on	Ativa o modo debug.
 ;deBugger off	Desativa o modo debug.
@@ -46,7 +47,7 @@ Comando	Função
 ;op.<tipo>	    Abre um arquivo baixado.
 ;credits	    Exibe os créditos do projeto.
 ;devBot	        Link para configurar o bot no Discord.
-
+```
 
 Exemplo de Uso:
 
