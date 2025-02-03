@@ -1,7 +1,0 @@
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/VIRUS.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/edit_cache.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/rebuild_cache.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/list_install_components.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/install.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/install/local.dir
-/home/pipe/dev/cppFiles/novocurl/build/CMakeFiles/install/strip.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/VIRUS.dir/link.d CMakeFiles/VIRUS.dir/main.cpp.o CMakeFiles/VIRUS.dir/network.cpp.o -o VIRUS  /usr/lib/libcurl.so -ldpp
